@@ -41,7 +41,7 @@ router.get('/get-data', function(req, res, next) {
       assert.equal(null, err);
       resultArray.push(doc);
     }, function() {
-      dataBase.close();
+      // dataBase.close();
       res.render('index', {student: resultArray});
     });
   });
