@@ -41,7 +41,7 @@ router.get('/get-data', function(req, res, next) {
       assert.equal(null, err);
       resultArray.push(doc);
     }, function() {
-      dataBase.close();
+      // dataBase.close();
       res.render('index', {student: resultArray});
     });
   });
@@ -58,7 +58,7 @@ router.post('/insert', function(req, res, next) {
     db.collection('leaderboards').insertOne(student, function(err, result) {
       assert.equal(null, err);
       console.log('Student inserted');
-      db.close();
+      // db.close();
     });
   });
 
