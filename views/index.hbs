@@ -10,6 +10,15 @@
         <button type="submit" class="inserting">Insert</button>
     </form>
 </section>
+{{!--  in this section the user is deleting it through thr id that it is from mongo as the name and the points, so it's going to visualize that --}} 
+<section class="delete">
+    <p>Delete a student by Id</p>
+    <form action="/delete" method="post" class="del">
+        <input type="text" id="id" name="id">
+        <button type="submit" class="deleting">Delete</button>
+    </form>
+      
+</section>
 {{!-- in this section the user is updating it through thr id that it is from mongo as the name and the points, so it's going to visualize that --}}
 <section class="update">
     <p>Update student's data</p>
@@ -24,22 +33,15 @@
     </form>
 </section>
 {{!-- in this section the user is typing the id of the student, so it's going to visualize that --}}
-<section class = "findings">
-    <p>Find a student by Id</p>
+<section class="findings">
+    <p>Find a student by Name</p>
     <form action="/find-one" method="post" class="find">
-         <input type="text" id="id" name="id">
-         <button class="finding">Find</button>
+         <input type="text" id="name" name="name">
+         <button id="finding">Find</button>
     </form>
 </section>
 
-<section class="delete">
-    <p>Delete a student by Id</p>
-    <form action="/delete" method="post" class="del">
-        <input type="text" id="id" name="id">
-        <button type="submit" class="deleting">Delete</button>
-    </form>
-      
-</section>
+
 {{!-- in this section I am ascending the list --}}
 <section class = "ascendings">
     <form action="/ascending" method="post">
@@ -55,7 +57,7 @@
 </section>
 <section class="get">
     <button class="getting"><a href="/get-data">RE-LOAD DATA</a></button>
-    <div>
+    <div class="gettings">
         {{# each student }}
             <article class="student">
                 <div>Name: {{ this.name }}</div>

@@ -18,9 +18,9 @@ p{
   width: 15%;
   height: 195px;
   padding: 15px;
-  margin-left: 205px;
+  margin-left: 50px;
   margin-top: 50px;
-  /* margin: auto; */
+
 }
 .inserting{
   width:100px;
@@ -37,8 +37,8 @@ p{
   width: 15%;
   height: 225px;
   padding: 15px;
-  margin-left: 485px;
-  margin-top: -230px;
+  margin-left: 690px;
+  margin-top: -107px;
 }
 .updating{
   width:100px;
@@ -52,19 +52,17 @@ p{
 #upd{
   margin-right: 20px;
 }
-.del, .find{
-  margin-top: -15px;
-}
 .findings{
-  margin-left: 765px;
-  margin-top: -260px;
+  margin-left: 960px;
+  position: relative;
+  top: -256px;
   border: 2px solid;
   border-radius: 10px;
   width: 325px;
   height: 75px;
   padding: 15px;
 }
-.finding{
+#finding{
   width:100px;
   height: 30px;
   background-color: #4682b4;
@@ -75,8 +73,8 @@ p{
   margin-top: 10px;
 }
 .delete{
-  margin-left: 765px;
-  margin-top: 20px;
+  margin-left: 320px;
+  margin-top: -228px;
   border: 2px solid;
   border-radius: 10px;
   width: 325px;
@@ -95,7 +93,7 @@ p{
 }
 .getting{
   width:130px;
-  margin-left: 580px;
+  margin-left: 440px;
   position: relative;
   height: 40px;
   background-color: #4682b4;
@@ -104,7 +102,10 @@ p{
   border-radius: 10px;
   text-decoration: none;
   color: #efefef;
-  top: -38px;
+  top: -225px;
+}
+.gettings{
+  margin-top: -160px;
 }
 a{
   text-decoration: none;
@@ -118,8 +119,8 @@ a{
   color: #dff0f0;
   font-size: 14px;
   border-radius: 10px;
-  margin-left: 800px;
-  top: 40px;
+  margin-left: 995px;
+  top: -225px;
 }
 .descending{
   position: relative;
@@ -129,12 +130,10 @@ a{
   color: #dff0f0;
   font-size: 14px;
   border-radius: 10px;
-  margin-left: 950px;
+  margin-left: 1150px;
+  top: -265px;
 }
-.students{
-  width: 60%;
-  margin: 80px auto;
-}
+
 .student{
   padding: 10px;
 }

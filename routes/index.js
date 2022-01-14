@@ -82,6 +82,7 @@ router.post('/update', function(req, res, next) {
   res.redirect('/');
 });
 
+
 router.post('/delete', function(req, res, next) {
   var id = req.body.id;
 
@@ -134,10 +135,10 @@ router.post('/descending', function(req, res, next) {
 
 router.post('/find-one', function(req, res, next) {
   var resultArray = [];
-  var id = req.body.id;
+  var name = req.body.name;
   mongo.connect(url, function(err, dataBase) {
     assert.equal(null, err);
-    var cursor = dataBase.collection('leaderboards').find({"_id": objectId(id)});
+    var cursor = dataBase.collection('leaderboards').find({name: name});
     cursor.forEach(function(doc, err) {
       assert.equal(null, err);
       resultArray.push(doc);
