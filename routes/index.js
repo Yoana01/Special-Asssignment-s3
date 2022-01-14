@@ -50,14 +50,15 @@ router.get('/get-data', function(req, res, next) {
 router.post('/insert', function(req, res, next) {
   var student = {
     name: req.body.name,
-    points: req.body.points
+    points: req.body.points,
   };
-  mongo.connect(url, function(err, dataBase) {
+
+  mongo.connect(url, function(err, db) {
     assert.equal(null, err);
-    dataBase.collection('leaderboards').insertOne(student, function(err, result) {
+    db.collection('leaderboards').insertOne(student, function(err, result) {
       assert.equal(null, err);
       console.log('Student inserted');
-      dataBase.close();
+      db.close();
     });
   });
 
@@ -71,15 +72,14 @@ router.post('/update', function(req, res, next) {
   };
   var id = req.body.id;
 
-  mongo.connect(url, function(err, dataBase) {
+  mongo.connect(url, function(err, db) {
     assert.equal(null, err);
-    dataBase.collection('leaderboards').updateOne({"_id": objectId(id)}, {$set: student}, function(err, result) {
+    db.collection('leaderboards').updateOne({"_id": objectId(id)}, {$set: student}, function(err, result) {
       assert.equal(null, err);
       console.log('Student updated');
-      dataBase.close();
+      db.close();
     });
   });
-  res.redirect('/');
 });
 
 
